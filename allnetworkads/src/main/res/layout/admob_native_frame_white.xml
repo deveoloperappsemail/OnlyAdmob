@@ -8,11 +8,9 @@
     <include layout="@layout/ads_area_white_layout" />
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:minHeight="50dp"
         android:orientation="vertical"
         app:cardBackgroundColor="@color/ads_lib_white"
         app:cardCornerRadius="10dp"
