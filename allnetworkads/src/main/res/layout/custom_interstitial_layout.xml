@@ -32,24 +32,6 @@
             android:src="@drawable/ic_baseline_close_24" />
     </com.google.android.material.card.MaterialCardView>
 
-    <!--<com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:backgroundTint="#FFCC66"
-        android:padding="@dimen/_4sdp"
-        android:text="Ad"
-        android:textColor="#ffffff"
-        android:textSize="12sp"
-        android:layout_margin="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />-->
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/info"
         android:layout_width="wrap_content"
