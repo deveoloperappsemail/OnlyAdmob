@@ -28,9 +28,6 @@ import com.example.allnetworkads.AdsCounter;
 import com.example.allnetworkads.R;
 import com.example.allnetworkads.adslib.AdsClick;
 import com.example.allnetworkads.adslib.Constants;
-import com.example.allnetworkads.adslib.InHouseAds;
-import com.example.allnetworkads.adslib.InHouseInterAds;
-import com.example.allnetworkads.adslib.InHouseNativeAds;
 import com.example.allnetworkads.adslib.SharedPrefUtils;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdListener;
@@ -406,7 +403,7 @@ public class AdmobAds {
                                  String pkgName, int isSmallAd, int nativeThemeColor) {
         FrameLayout nativeAds = activity.findViewById(R.id.fl_adplaceholder);
         LinearLayout AdsAreaEmpty = activity.findViewById(R.id.ads_area_empty);
-        LinearLayoutCompat inHouseAdArea =  activity.findViewById(R.id.inHouseAd);
+//        LinearLayoutCompat inHouseAdArea =  activity.findViewById(R.id.inHouseAd);
 
         String nativeAdId = SharedPrefUtils
                 .getStringData(context, Constants.NATIVE_AD);
@@ -446,14 +443,8 @@ public class AdmobAds {
 
                             //correct
                             nativeAds.setVisibility(View.VISIBLE);
-                            inHouseAdArea.setVisibility(View.GONE);
                             AdsAreaEmpty.setVisibility(View.GONE);
 
-                            //Testing
-                            /*InHouseNativeAds.showInHouseAds(context, activity, appName, pkgName, isSmallAd);
-                            nativeAds.setVisibility(View.GONE);
-                            AdsAreaEmpty.setVisibility(View.GONE);
-                            inHouseAdArea.setVisibility(View.VISIBLE);*/
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -474,16 +465,8 @@ public class AdmobAds {
                                 new AdListener() {
                                     @Override
                                     public void onAdFailedToLoad(LoadAdError loadAdError) {
-                                        if (InHouseAds.getModelAdsList().size() > 0) {
-                                            InHouseNativeAds.showInHouseAds(context, activity, appName, pkgName, isSmallAd);
                                             nativeAds.setVisibility(View.GONE);
-                                            AdsAreaEmpty.setVisibility(View.GONE);
-                                            inHouseAdArea.setVisibility(View.VISIBLE);
-                                        } else {
-                                            nativeAds.setVisibility(View.GONE);
-                                            inHouseAdArea.setVisibility(View.GONE);
                                             AdsAreaEmpty.setVisibility(View.VISIBLE);
-                                        }
                                     }
                                 })
                         .build();
@@ -497,7 +480,7 @@ public class AdmobAds {
                                          String pkgName, int isSmallAd, int nativeThemeColor) {
         FrameLayout nativeAds =view.findViewById(R.id.fl_adplaceholder);
         LinearLayout AdsAreaEmpty = view.findViewById(R.id.ads_area_empty);
-        LinearLayoutCompat inHouseAdArea =  view.findViewById(R.id.inHouseAd);
+//        LinearLayoutCompat inHouseAdArea =  view.findViewById(R.id.inHouseAd);
         String nativeAD = "";
         try {
             nativeAD = SharedPrefUtils.getStringData(activity,
@@ -542,7 +525,7 @@ public class AdmobAds {
 
                             //correct
                             nativeAds.setVisibility(View.VISIBLE);
-                            inHouseAdArea.setVisibility(View.GONE);
+//                            inHouseAdArea.setVisibility(View.GONE);
                             AdsAreaEmpty.setVisibility(View.GONE);
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -566,16 +549,9 @@ public class AdmobAds {
                                     public void onAdFailedToLoad(LoadAdError loadAdError) {
 
                                         try {
-                                            if (InHouseAds.getModelAdsList().size() > 0) {
-                                                InHouseNativeAds.showFragmentInHouseAds(context, view, appName, pkgName, isSmallAd);
                                                 nativeAds.setVisibility(View.GONE);
-                                                AdsAreaEmpty.setVisibility(View.GONE);
-                                                inHouseAdArea.setVisibility(View.VISIBLE);
-                                            } else {
-                                                nativeAds.setVisibility(View.GONE);
-                                                inHouseAdArea.setVisibility(View.GONE);
                                                 AdsAreaEmpty.setVisibility(View.VISIBLE);
-                                            }
+//
                                         } catch (Exception e) {
                                             e.printStackTrace();
                                         }

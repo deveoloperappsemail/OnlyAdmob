@@ -28,7 +28,6 @@ public class LiveAds {
             fetchData(context, packageName);
         }
 
-        InHouseAds.getInHouseAds(context, packageName);
     }
 
     private static void storeAds(Context context) {

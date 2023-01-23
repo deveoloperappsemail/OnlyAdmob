@@ -29,5 +29,4 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <include layout="@layout/in_house_layout_white_small" />
 </LinearLayout>

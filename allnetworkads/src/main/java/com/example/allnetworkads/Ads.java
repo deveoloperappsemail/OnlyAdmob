@@ -21,9 +21,7 @@ public class Ads {
         if(showAdmob) {
             AdmobAds.showActivityBanner(context, activity);
         }
-        else {
-            AppLovinAds.Companion.showActivityBanner(context, activity);
-        }
+
     }
 
     public static void showFragmentBanner(Context context, View view) {
@@ -31,9 +29,7 @@ public class Ads {
         if(showAdmob) {
             AdmobAds.showFragmentBanner(context, view);
         }
-        else {
-            AppLovinAds.Companion.showFragmentBanner(context, view);
-        }
+
     }
 
     public static void loadNative(Context context, Activity activity, View view, String appName,
@@ -48,25 +44,12 @@ public class Ads {
                 AdmobAds.refreshAd(context, activity, appName, pkgName, isSmallAd, nativeTheme);
             }
         }
-        else {
-            if(isFragment) {
-                AppLovinAds.Companion.loadFragmentNativeAd(context, view, appName, pkgName,
-                        isSmallAd, nativeTheme);
-            }
-            else {
-                AppLovinAds.Companion.loadNativeAd(context, activity, appName, pkgName,
-                        isSmallAd, nativeTheme);
-            }
-        }
     }
 
     public static void loadInter(Context context, Activity activity) {
         boolean showAdmob = SharedPrefUtils.getBooleanData(context, Constants.SHOW_ADMOB);
         if(showAdmob) {
             AdmobAds.loadAdmobInters(context);
-        }
-        else {
-            AppLovinAds.Companion.loadInterstitialAd(context, activity);
         }
     }
 
@@ -78,9 +61,6 @@ public class Ads {
 
         if(showAdmob) {
             AdmobAds.showInter(context, activity, appName, packageName);
-        }
-        else {
-            AppLovinAds.Companion.showInter(context, activity, appName, packageName);
         }
     }
 
@@ -94,9 +74,6 @@ public class Ads {
         if(showAdmob) {
             AdmobAds.RedirectActivity(context, activity, appName, packageName, intent, isFinish);
         }
-        else {
-            AppLovinAds.Companion.RedirectActivity(context, activity, appName, packageName, intent, isFinish);
-        }
     }
 
     public static void showFragmentInterWithCommit(Context context, Activity activity,
@@ -108,9 +85,6 @@ public class Ads {
 
         if(showAdmob) {
             AdmobAds.redirectFragmentWithCommit(context, activity, appName, packageName, fragmentTransaction);
-        }
-        else {
-            AppLovinAds.Companion.redirectFragmentWithCommit(context, activity, appName, packageName, fragmentTransaction);
         }
     }
 
@@ -126,10 +100,6 @@ public class Ads {
             AdmobAds.redirectFragmentWithNavController(context, activity, appName, packageName,
                     fragmentId, view, bundle, backStack);
         }
-        else {
-            AppLovinAds.Companion.redirectFragmentWithNavController(context, activity, appName, packageName,
-                    fragmentId, view, bundle, backStack);
-        }
     }
 
     public static void adOnBack(Context context, Activity activity){
@@ -140,9 +110,6 @@ public class Ads {
 
         if(showAdmob) {
             AdmobAds.adOnBack(context, activity, appName, packageName);
-        }
-        else {
-            AppLovinAds.Companion.adOnBack(context, activity, appName, packageName);
         }
     }
 }

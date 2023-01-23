@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.allnetworkads.Ads
 import com.example.allnetworkads.admob.ENUMS
-import com.example.allnetworkads.adslib.InHouseAds
 import com.example.allnetworkads.adslib.TestAds
 
 class MainActivity : AppCompatActivity() {
@@ -27,10 +26,6 @@ class MainActivity : AppCompatActivity() {
         to show applovin ads save false*/
         TestAds.getTestAds(this, ENUMS.ADMOB, packageName)
 
-        //LiveAds.getLiveAds(this, packageName)
-
-        InHouseAds.getInHouseAds(this, "updatesoftware.checker.online.finder.update")
-
         Ads.loadNative(this, this, null, getString(R.string.ads_lib_app_name), packageName,
                ENUMS.LARGE_ADS, ENUMS.WHITE, false)
 
@@ -43,25 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         Ads.showActivityBanner(this, this)
 
-
-        //InHouseNativeAds.showInHouseAds(this, this, getString(R.string.ads_lib_app_name),
-          //  packageName,  ENUMS.SMALL_ADS)
-
-       // playVideo()
     }
-
-   /* private fun playVideo() {
-        val youTubePlayerView = findViewById<YouTubePlayerView>(R.id.youtube)
-        youTubePlayerView.enableAutomaticInitialization = false
-        val iFramePlayerOptions: IFramePlayerOptions = IFramePlayerOptions.Builder()
-            .controls(0)
-            .build()
-        youTubePlayerView.initialize(object : AbstractYouTubePlayerListener() {
-            override fun onReady(youTubePlayer: YouTubePlayer) {
-                val videoId = "g5qauZ8Vn2w"
-                youTubePlayer.loadVideo(videoId, 0f)
-            }
-        }, iFramePlayerOptions)
-    }*/
 
 }

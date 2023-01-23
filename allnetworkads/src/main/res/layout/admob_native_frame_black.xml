@@ -26,5 +26,4 @@
             android:visibility="gone"
             android:layout_marginHorizontal="16dp"/>
     </com.google.android.material.card.MaterialCardView>
-    <include layout="@layout/in_house_layout_black" />
 </LinearLayout>

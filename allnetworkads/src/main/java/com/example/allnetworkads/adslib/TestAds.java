@@ -35,7 +35,6 @@ public class TestAds {
             }
         }
 
-        InHouseAds.getInHouseAds(context, packageName);
     }
 
     private static void storeAds(Context context) {
